@@ -3,40 +3,43 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-weight:800;
+  color:black
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+table{
+  border-collapse:collapse;
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.479);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+th,tr,td{
+  padding-left:15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+th{
+  color:#0A5DC2;
+  text-align:left;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: #F9F9F9;
+  border-bottom: 5px solid #F87E33;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.even-row{
+  background-color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.odd-row{
+  background-color: #ECF1F8;
 }
-
-.card {
-  padding: 2em;
+.gamesPlayed{
+  padding-left: 150px;
 }
-
-.read-the-docs {
-  color: #888;
+.avatar{
+  padding-right: 0px;
+}
+.teamName{
+  text-align: left;
+}
+img{
+  width:30px
 }
