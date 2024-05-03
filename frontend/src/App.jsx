@@ -26,20 +26,31 @@ function App() {
               <th>RANK</th>
               <th> </th>
               <th>TEAM NAME</th>
-              <th>TOTAL GAMES PLAYED</th>
+              <th className="gamesPlayed">TOTAL GAMES PLAYED</th>
               <th>SCORE</th>
             </tr>
           </thead>
           <tbody>
             {teams &&
               teams.map((team, index) => (
-                <tr>
-                  <td>{index + 1}</td>
+                <tr className={index % 2 == 0 ? "even-row" : "odd-row"}>
                   <td>
-                    <Avatar src={team.avatar} size="50" round={true} />
+                    {index === 0 && (
+                      <img src="src/assets/gold-cup.png" alt="1" />
+                    )}
+                    {index === 1 && (
+                      <img src="src/assets/silver-cup.png" alt="2" />
+                    )}
+                    {index === 2 && (
+                      <img src="src/assets/bronze-cup.png" alt="3" />
+                    )}
+                    {index > 2 && index + 1}
                   </td>
-                  <td>{team.teamName}</td>
-                  <td>{team.gamesPlayed}</td>
+                  <td className="avatar">
+                    <Avatar src={team.avatar} size="40" round={true} />
+                  </td>
+                  <td className="teamName">{team.teamName}</td>
+                  <td className="gamesPlayed">{team.gamesPlayed}</td>
                   <td>+{team.score}</td>
                 </tr>
               ))}
