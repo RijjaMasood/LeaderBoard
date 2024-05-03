@@ -15,6 +15,11 @@ function App() {
     };
 
     fetchTeams();
+    // Set up polling to fetch teams every 10 seconds
+    const intervalId = setInterval(fetchTeams, 10000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
